@@ -19,7 +19,9 @@ RUN apt-get install -y ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-contro
 RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash ;\
                   mkdir -p ~/catkin_ws/src ;\
                   cd ~/catkin_ws/src ;\
-                  catkin_init_workspace"
+                  catkin_init_workspace ;\
+                  cd ~/catkin_ws/ ;\
+                  catkin_make"
 
 # setup required models for Gazebo
 RUN /bin/bash -c "mkdir -p ~/.gazebo ;\
