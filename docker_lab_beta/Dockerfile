@@ -23,6 +23,7 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash ;\
                   git clone https://github.com/ProjektPrzejsciowy/projekt_przejsciowy.git ;\
                   cd ~/catkin_ws/ ;\
                   catkin_make ;\
+		  mv /root/catkin_ws/src/projekt_przejsciowy/drive_simulation.py /opt/ros/kinetic/lib/python2.7/dist-packages/drive_simulation.py ;\
                   rm -rf ./src/projekt_przejsciowy/src ;\
                   rm ./src/projekt_przejsciowy/README.md"
 
